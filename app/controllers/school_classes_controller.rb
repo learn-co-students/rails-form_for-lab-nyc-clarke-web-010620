@@ -6,12 +6,11 @@ class SchoolClassesController < ApplicationController
   def new
   @school_class = SchoolClass.new  
   end
-
+  
   def create
-  @school_class =SchoolClass.create(params.require())
-  end
-
-  def edit
+    # byebug
+    @school_class = SchoolClass.create(strong_params)
+    redirect_to school_class_path(@school_class)
   end
 
   def update
@@ -19,7 +18,8 @@ class SchoolClassesController < ApplicationController
 
   private 
 
-  def strong_params 
-  params.require(:school_class)
+  def strong_params
+  params.require(:school_class).permit(:title, :room_number)
   end 
+
 end

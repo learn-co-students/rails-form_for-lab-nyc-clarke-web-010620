@@ -4,35 +4,35 @@ RSpec.describe SchoolClassesController, type: :controller do
 
   describe "GET #:new" do
     it "returns http success" do
-      get ::new
+      get :new
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET #:create" do
     it "returns http success" do
-      get ::create
+      get :create
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET #:show" do
     it "returns http success" do
-      get ::show
+      get :show
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET #:edit" do
     it "returns http success" do
-      get ::edit
+      get :edit
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET #:update" do
     it "returns http success" do
-      get ::update
+      get :update
       expect(response).to have_http_status(:success)
     end
   end
